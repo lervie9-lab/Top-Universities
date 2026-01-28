@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Universities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff3399;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ff66b3;
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #ffe6f0;
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .university {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px 20px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .university:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+
+        .university img {
+            width: 80px;
+            height: auto;
+            margin-right: 25px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #ff3399;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 8% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .modal-content h2 {
+            color: #ff3399;
+        }
+
+        .close {
+            font-size: 28px;
+            color: #ff3399;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+	}
+	.modal-content a {
+    color: #ff3399;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Top Universities in the World</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+    <div class="university">
+        <img src="images/harvard.png" onclick="openModal('harvardModal')">
+        <h2>Harvard University</h2>
+    </div>
+
+    <div class="university">
+        <img src="images/mmsu.png" onclick="openModal('mmsuModal')">
+        <h2>Mariano Marcos State University (MMSU)</h2>
+    </div>
+
+    <div class="university">
+        <img src="images/oxford.png" onclick="openModal('oxfordModal')">
+        <h2>University of Oxford</h2>
+    </div>
+
+    <div class="university">
+        <img src="images/up.png" onclick="openModal('upModal')">
+        <h2>University of the Philippines (UP)</h2>
+    </div>
+</main>
+
+<!-- Harvard Modal -->
+<div id="harvardModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('harvardModal')">&times;</span>
+        <h2>Harvard University</h2>
+
+        <p>
+    <strong>Website:</strong>
+    <a href="https://www.harvard.edu/" target="_blank">https://www.harvard.edu/</a>
+</p>
+
+
+        <p>
+            Harvard University is one of the most prestigious universities in the world,
+            located in Cambridge, Massachusetts, United States. Founded in 1636, it is
+            the oldest institution of higher learning in the United States. Harvard is
+            highly competitive and selective, receiving thousands of applications each
+            year. Applicants are expected to have strong academic records, excellent
+            standardized test scores, and compelling personal statements.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Academic Excellence:</strong> Harvard offers rigorous academic
+                programs in arts, sciences, humanities, engineering, law, medicine, and
+                business, led by world-renowned faculty members and scholars.
+            </li>
+            <li>
+                <strong>Research and Innovation:</strong> The university is a major center
+                for research and innovation, focusing on solving global challenges and
+                securing significant research funding.
+            </li>
+            <li>
+                <strong>Campus Life:</strong> Harvard has a vibrant and diverse campus
+                community with numerous student organizations, clubs, sports, cultural
+                events, and social activities.
+            </li>
+            <li>
+                <strong>Global Reputation:</strong> Harvard is consistently recognized as
+                one of the top universities in the world, with strong international
+                partnerships.
+            </li>
+            <li>
+                <strong>Alumni Network:</strong> Harvard has a powerful alumni network
+                that includes influential leaders in business, politics, academia, and
+                other fields.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- MMSU Modal -->
+<div id="mmsuModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('mmsuModal')">&times;</span>
+        <h2>Mariano Marcos State University (MMSU)</h2>
+
+        <p>
+    <strong>Website:</strong>
+    <a href="https://www.mmsu.edu.ph/" target="_blank">https://mmsu.edu.ph/</a>
+</p>
+
+
+        <p>
+            Mariano Marcos State University (MMSU) is a premier state university located
+            in Ilocos Norte, Philippines. Established in 1978, MMSU has grown to become
+            a leading institution of higher learning in the northern part of the country.
+            Its main campus is located in Batac, Ilocos Norte, with several satellite
+            campuses across the province. MMSU is a great option for students pursuing
+            higher education in the Philippines.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Academic Excellence:</strong> MMSU offers a wide range of undergraduate
+                and graduate programs in agriculture, engineering, arts, sciences, and business,
+                and is known for its strong academic standards.
+            </li>
+            <li>
+                <strong>Research and Innovation:</strong> MMSU serves as a hub for research and
+                innovation, focusing on regional and national development challenges with support
+                from government and international institutions.
+            </li>
+            <li>
+                <strong>Community Engagement:</strong> The university is deeply committed to
+                community service through extension programs, disaster preparedness initiatives,
+                and environmental conservation efforts.
+            </li>
+            <li>
+                <strong>Campus Life:</strong> MMSU offers a vibrant campus life with student
+                organizations, clubs, sports activities, and cultural events.
+            </li>
+            <li>
+                <strong>Beautiful Campus:</strong> The campus is known for its scenic beauty,
+                lush greenery, modern facilities, and peaceful learning environment.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Oxford Modal -->
+<div id="oxfordModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('oxfordModal')">&times;</span>
+        <h2>University of Oxford</h2>
+
+        <p>
+    <strong>Website:</strong>
+    <a href="https://www.ox.ac.uk/" target="_blank">https://www.ox.ac.uk/</a>
+</p>
+
+
+        <p>
+            The University of Oxford is one of the oldest and most prestigious universities
+            in the world, located in Oxford, England. Founded in the 11th century, it is
+            considered one of the top universities globally. Oxford University is highly
+            competitive and selective, and admission is typically quite challenging.
+            The university receives thousands of applications each year. Applicants are
+            expected to have a strong academic record, excellent standardized test scores,
+            and a compelling personal statement.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Academic Excellence:</strong> Oxford is renowned for its rigorous
+                academic programs across a wide range of disciplines, including arts,
+                sciences, humanities, engineering, law, and medicine. The university is
+                home to many world-renowned faculty members and scholars.
+            </li>
+            <li>
+                <strong>Collegiate System:</strong> Oxford is a collegiate university,
+                meaning students are affiliated with one of the university’s 39 colleges.
+                Each college provides a unique community and academic experience.
+            </li>
+            <li>
+                <strong>Research and Innovation:</strong> Oxford is a major center for
+                research and innovation, with a focus on addressing global challenges and
+                conducting groundbreaking research projects supported by significant
+                funding.
+            </li>
+            <li>
+                <strong>Campus Life:</strong> The Oxford campus is a vibrant and diverse
+                community with numerous student organizations, clubs, and activities.
+                Students can participate in sports, cultural events, and social gatherings.
+            </li>
+            <li>
+                <strong>Global Reputation:</strong> Oxford is widely recognized as one of
+                the top universities in the world, with strong partnerships with leading
+                institutions across the globe and a diverse international student body.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- UP Modal -->
+<div id="upModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('upModal')">&times;</span>
+        <h2>University of the Philippines (UP)</h2>
+
+        <p>
+    <strong>Website:</strong>
+    <a href="https://up.edu.ph/" target="_blank">https://up.edu.ph/</a>
+</p>
+
+        <p>
+            The University of the Philippines (UP) is a premier state university system in
+            the Philippines, renowned for its academic excellence, research, and community
+            engagement. It is considered one of the top universities in Asia and is often
+            referred to as the national university of the Philippines. The main campuses
+            are located in Diliman, Quezon City; Los Baños, Laguna; and Baguio City. UP is
+            highly competitive and selective, making it a prestigious choice for higher
+            education in the country.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Academic Excellence:</strong> UP offers a wide range of undergraduate
+                and graduate programs in arts, sciences, humanities, engineering, medicine,
+                law, and agriculture, supported by rigorous academic standards and highly
+                qualified faculty.
+            </li>
+            <li>
+                <strong>Research and Innovation:</strong> UP is a major center for research
+                and innovation in the Philippines, contributing significantly to national
+                development through groundbreaking research projects.
+            </li>
+            <li>
+                <strong>Community Engagement:</strong> The university is deeply committed
+                to public service through extension programs, disaster relief efforts,
+                and environmental conservation initiatives.
+            </li>
+            <li>
+                <strong>Campus Life:</strong> UP has multiple campuses across the country,
+                each with its own unique culture, offering students various extracurricular
+                activities such as sports, clubs, and organizations.
+            </li>
+            <li>
+                <strong>Global Reputation:</strong> UP is internationally recognized and
+                maintains strong partnerships with top universities around the world,
+                attracting students from different countries.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<footer>
+    &copy; 2026 Top Universities Website | All Rights Reserved
+</footer>
+
+<script>
+function openModal(id) {
+    document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+</script>
+
+</body>
+</html>
